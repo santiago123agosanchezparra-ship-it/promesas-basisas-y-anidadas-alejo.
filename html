@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Promesas en JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Introducción a Promesas en JavaScript</h1>
+            <p>Explorando el mundo asíncrono con Promesas</p>
+        </header>
+
+        <div class="exercises-grid">
+            <!-- Ejercicio 1 -->
+            <div class="card" id="ejercicio1">
+                <div class="card-header">
+                    <span class="exercise-badge exercise-1">🟢 Ejercicio 1</span>
+                    <h2>Mi Primera Promesa</h2>
+                </div>
+                <div class="card-content">
+                    <p class="description">Función que saluda después de 2 segundos</p>
+                    <div class="input-group">
+                        <input type="text" id="nombreInput" placeholder="Ingresa tu nombre" value="Alejo">
+                        <button onclick="ejecutarEjercicio1()" class="btn primary">Saludar</button>
+                    </div>
+                    <div class="result-box" id="resultado1">
+                        <span class="result-label">Resultado:</span>
+                        <span class="result-value">Esperando acción...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejercicio 2 -->
+            <div class="card" id="ejercicio2">
+                <div class="card-header">
+                    <span class="exercise-badge exercise-2">🟡 Ejercicio 2</span>
+                    <h2>Encadenamiento Simple</h2>
+                </div>
+                <div class="card-content">
+                    <p class="description">Obtener número (10) y multiplicarlo por 2</p>
+                    <button onclick="ejecutarEjercicio2()" class="btn primary">Ejecutar</button>
+                    <div class="result-box" id="resultado2">
+                        <span class="result-label">Resultado:</span>
+                        <span class="result-value">Esperando acción...</span>
+                    </div>
+                    
+                    <!-- Análisis de error común -->
+                    <div class="analysis-section">
+                        <h3>⚠️ Análisis - Error Común</h3>
+                        <button onclick="ejecutarEjercicio2Error()" class="btn warning">Ejecutar con Error</button>
+                        <div class="result-box" id="resultado2Error">
+                            <span class="result-label">Resultado:</span>
+                            <span class="result-value">Esperando acción...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejercicio 3 -->
+            <div class="card" id="ejercicio3">
+                <div class="card-header">
+                    <span class="exercise-badge exercise-3">🟠 Ejercicio 3</span>
+                    <h2>Validación de Edad</h2>
+                </div>
+                <div class="card-content">
+                    <p class="description">Verificar si la persona es mayor de edad</p>
+                    <div class="input-group">
+                        <input type="number" id="edadInput" placeholder="Ingresa la edad" value="17" min="0" max="120">
+                        <button onclick="ejecutarEjercicio3()" class="btn primary">Verificar</button>
+                    </div>
+                    <div class="result-box" id="resultado3">
+                        <span class="result-label">Resultado:</span>
+                        <span class="result-value">Esperando acción...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel de Conceptos -->
+        <div class="concepts-panel">
+            <h2>🧩 Conceptos Clave</h2>
+            <div class="concepts-grid">
+                <div class="concept-item">
+                    <span class="concept-title">Promesa → resolve(valor)</span>
+                    <span class="concept-desc">.then(valor)</span>
+                </div>
+                <div class="concept-item">
+                    <span class="concept-title">Promesa → reject(error)</span>
+                    <span class="concept-desc">.catch(error)</span>
+                </div>
+                <div class="concept-item">
+                    <span class="concept-title">.then()</span>
+                    <span class="concept-desc">Siempre retorna una nueva promesa</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
